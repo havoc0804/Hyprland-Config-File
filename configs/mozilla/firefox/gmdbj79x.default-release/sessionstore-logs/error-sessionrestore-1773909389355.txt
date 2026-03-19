@@ -1,0 +1,1 @@
+1773912174872	SessionStore.LogManager	ERROR	Failed to copy log stream to file: UnknownError: Could not create directory `/home/havoc/.config/mozilla/firefox/gmdbj79x.default-release/sessionstore-logs' (NS_ERROR_FAILURE) No traceback available
