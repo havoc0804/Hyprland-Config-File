@@ -35,17 +35,17 @@ true
 #
 
 https://github.com/
-https://github.com/assets-cdn/worker/service-worker-41293e3ebb471ba2.js?current_user=havoc0804&errors_url=https%3A%2F%2Fapi.github.com%2F_private%2Fbrowser%2Ferrors&release=2be2fdd6a3d689a8fe0667b4e784d48f3079d9c3&actor_id=224394689&is_staff=false&analytics_collector_url=https%3A%2F%2Fcollector.github.com%2Fgithub%2Fcollect&module=true
+https://github.com/assets-cdn/worker/service-worker-41293e3ebb471ba2.js?current_user=havoc0804&errors_url=https%3A%2F%2Fapi.github.com%2F_private%2Fbrowser%2Ferrors&release=5cf4cd8238dd4bca380c8509ef2f055f0d68a990&actor_id=224394689&is_staff=false&analytics_collector_url=https%3A%2F%2Fcollector.github.com%2Fgithub%2Fcollect&module=true
 true
-{284c8eed-5445-4a15-af39-3f96382424f1}
+{7c90f435-4eda-4a51-bd1c-282bb7297021}
 0
-1773955911744544
-1773955911744911
-1773955911735591
+1773990363326581
+1773990363326835
+1773990363318333
 0
 true
 0
-243
+24
 0
 -1
 1
