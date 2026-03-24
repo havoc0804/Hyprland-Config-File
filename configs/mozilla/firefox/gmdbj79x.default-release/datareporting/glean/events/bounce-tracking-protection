@@ -2,3 +2,4 @@
 {"timestamp":6298053,"category":"glean","name":"restarted","extra":{"glean.startup.date":"2026-03-24T20:26+11:00","glean_timestamp":"1774344415384"},"execution_counter":4}
 {"timestamp":9897786,"category":"bounce.tracking.protection","name":"purge_action","extra":{"success":"true","glean_timestamp":"1774348015116","require_stateful_bounces":"false","bounce_time":"1774342625","site_host":"stackoverflow.com","is_dry_run":"true"},"execution_counter":4}
 {"timestamp":10899582,"category":"glean","name":"restarted","extra":{"glean.startup.date":"2026-03-24T21:43+11:00","glean_timestamp":"1774349016913"},"execution_counter":5}
+{"timestamp":66032,"category":"glean","name":"restarted","extra":{"glean.startup.date":"2026-03-25T07:55+11:00","glean_timestamp":"1774385700781"},"execution_counter":6}
