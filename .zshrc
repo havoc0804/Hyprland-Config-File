@@ -67,9 +67,10 @@ alias ls='exa -la --time-style=long-iso --sort=mod --reverse --icons'
 alias ll='exa -lh --git --icons'
 alias ga='git add'
 alias gcm='git commit -m'
-alias gp='gitpush'
+alias gp='git push'
 alias c='clear'
-
+alias shutdown='shutdown now'
+alias reboot='reboot'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
