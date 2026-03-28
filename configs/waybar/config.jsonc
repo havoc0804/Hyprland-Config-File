@@ -1,4 +1,8 @@
 {
+  
+  "spacing": 18,
+  "margin-top":10,
+
   "modules-left": [],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["network", "pulseaudio", "clock"],
@@ -23,7 +27,8 @@
     "persistent-workspaces": {
 	"DP-4" : [1, 2, 3, 4, 5 ],
       "HDMI-A-2": [6, 7, 8, 9, 10],
-    }
+    },
+    "on-click": "activate",
   },
 
   "pulseaudio": {
@@ -50,7 +55,7 @@
   "network": {
     "interface": "wlan0",
     "format": "{ifname}",
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "{essid} ",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
     "format-disconnected": "", // An empty format will hide the module.
     "tooltip-format": "{ifname} via {gwaddr} 󰊗",

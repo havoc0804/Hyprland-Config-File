@@ -1,4 +1,4 @@
-#!/usr/bash/env zshi
+#!/usr/bin/env zsh
 
 pkill waybar
 waybar &
