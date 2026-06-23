@@ -1,0 +1,58 @@
+@import "colors.css";
+
+* {
+    all: unset;
+    font-family: "Roboto Mono", "JetBrainsMono Nerd Font Propo", "Noto Sans CJK JP";
+}
+
+label {
+    color: @on_surface;
+}
+
+.modules-right {
+    background-color: @surface_container;
+    padding: 2px 12px;
+    border-radius: 99px;
+    letter-spacing: +0.5px;
+    margin: 4px;
+}
+
+.modules-center {
+    background-color: @surface_container;
+    padding: 2px 12px;
+    border-radius: 99px;
+    letter-spacing: +1px;
+    margin: 4px;
+}
+
+#clock {
+    font-weight: 500;
+    color: @on_surface;
+}
+
+/* --- Workspaces Pill Container --- */
+#workspaces {
+    background-color: @surface_container;
+    padding: 4px 6px;
+    margin: 4px;
+    border-radius: 99px;
+}
+
+/* Individual Workspace Buttons */
+#workspaces button {
+    background-color: transparent;
+    color: @on_surface_variant;
+    padding: 2px 8px;
+    border-radius: 99px;
+    margin: 0 2px;
+    transition: all 250ms ease-in-out;
+    font-weight: bold;
+}
+
+/* Active/Current Workspace */
+#workspaces button.active {
+    background-color: @primary;
+    color: @on_primary;
+    min-width: 2rem;
+    font-weight: 800;
+}
