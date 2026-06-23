@@ -1,0 +1,73 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 40, // Bumped safely to fit your larger 18px font size cleanly
+	"spacing": 0,
+	"margin-top": 0,
+	"margin-bottom": 0,
+	"margin-left": 10,
+	"margin-right": 10,
+
+	"modules-left": [
+		"hyprland/window",
+		"custom/media"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"bluetooth",
+		"network",
+		"clock"
+	],
+
+	"hyprland/window": {
+		"format": "󱂬 {title}",
+		"max-length": 50,
+		"separate-outputs": true,
+		"rewrite": {
+			"": "Desktop"
+		}
+	},
+	"custom/media": {
+		"format": "󰝚 {}",
+		"max-length": 35,
+		"exec": "playerctl metadata --format '{{title}} - {{artist}}' 2> /dev/null",
+		"on-click": "playerctl play-pause",
+		"interval": 2
+	},
+	"hyprland/workspaces": {
+		"format": "{name}",
+		"persistent-workspaces": {
+			"DP-4": [1, 2, 3, 4, 5],
+			"HDMI-A-2": [6, 7, 8, 9, 10]
+		}
+	},
+	"network": {
+		"format-wifi": "󰤨 {essid}",
+		"format-ethernet": "󰈀 {ipaddr}/{cidr}",
+		"format-disconnected": "󰤮 Disconnected",
+		"on-click": "kitty --class dotfiles-floating -e nmtui"
+	},
+	"bluetooth": {
+		"format": "󰂯",
+		"format-on": "󰂯",
+		"format-off": "󰂲",
+		"format-disabled": "󰂲",
+		"on-click": "blueman-manager"
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-muted": "󰝟 Muted",
+		"format-icons": {
+			"default": ["󰕿", "󰖀", "󰕾"]
+		},
+		"scroll-step": 2,
+		"on-click": "pavucontrol"
+	},
+	"clock": {
+		"interval": 60,
+		"format": "󱑒 {:L%a %d %b %H:%M}"
+	}
+}
