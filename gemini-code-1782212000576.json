@@ -1,0 +1,78 @@
+{
+	"height": 10,
+	"layer": "top",
+	"spacing": 20,
+	"margin-top": 5,
+	"margin-left": 10,
+	"margin-right": 10,
+	"margin-bottom": 0,
+	"padding": 10,
+	"modules-right": [
+		"pulseaudio",
+		"bluetooth",
+		"network",
+		"clock"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+
+	"clock": {
+		"interval": 60,
+		"format": "{:L%a %d %b %H:%M}"
+	},
+	"network": {
+		// Removed hardcoded "wlp7s0" so it auto-detects your active wireless interface
+		"format": "{ifname}",
+		"format-wifi": "{essid} {icon}", // Fixed token from {icons} to {icon}
+		"format-icons": [
+			"󰤯",
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+		],
+		"format-ethernet": "{ipaddr}/{cidr}", // Fixed typo {ippaddr} -> {ipaddr}
+		"format-disconnected": "󰤮 Disconnected", // Added an icon so you know it's off
+		"on-click": "kitty --class dotfiles-floating -e nmtui"
+	},
+	"hyprland/workspaces": {
+		"format": "{name}",
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9",
+			"10": "10" // Fixed: Removed the trailing comma here that crashed the JSON parser
+		},
+		"persistent-workspaces": {
+			"DP-4": [1,2,3,4,5],
+			"HDMI-A-2": [6,7,8,9,10]
+		}
+	},
+	"bluetooth": {
+		"format": "󰂯", // Fixed typo: formant -> format
+		"format-on": "󰂯",
+		"format-off": "󰂲", // Fixed typo: formant-off -> format-off
+		"format-disabled": "󰂲",
+		"on-click": "blueman-manager"
+	},
+	"pulseaudio": {
+		"format": "{volume}% {icon}",
+		"format-muted": "󰝟",
+		"format-icons": {
+			"default": [
+				"󰕿",
+				"󰖀",
+				"󰕾"
+			]
+		},
+		"scroll-step": 1,
+		"on-click": "pavucontrol"
+	}
+}
