@@ -86,11 +86,12 @@
     "break",
     {
       "type": "custom",
-      "format": "       \"Immortal Venerables regret but I do not\""
+      "format": "\"Immortal Venerables regret but I do not\""
     },
     "break",
     {
-      "type": "colors"
+      "type": "colors",
+      "symbol": "circle"
     },
     "break"
   ]
