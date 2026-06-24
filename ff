@@ -24,63 +24,52 @@
     {
       "type": "title",
       "key": "usr",
-      "keyColor": "#CBA6F7",
       "format": "{user-name}"
     },
     {
       "type": "os",
       "key": "os",
-      "keyColor": "#94E2D5",
       "format": "{name}"
     },
     {
       "type": "kernel",
-      "key": "ker",
-      "keyColor": "#74C7EC"
+      "key": "ker"
     },
     {
       "type": "shell",
       "key": "sh",
-      "keyColor": "#F5C2E7",
       "format": "{pretty-name}"
     },
     {
       "type": "terminal",
       "key": "ter",
-      "keyColor": "#94E2D5",
       "format": "{pretty-name}"
     },
     {
       "type": "packages",
-      "key": "pkgs",
-      "keyColor": "#F9E2AF"
+      "key": "pkgs"
     },
     {
       "type": "wm",
-      "key": "wm",
-      "keyColor": "#89DCEB"
+      "key": "wm"
     },
     {
       "type": "terminalfont",
-      "key": "fn",
-      "keyColor": "#F5C2E7"
+      "key": "fn"
     },
     {
       "type": "cpu",
       "key": "cpu",
-      "keyColor": "#CBA6F7",
       "format": "{name}"
     },
     {
       "type": "gpu",
       "key": "gpu",
-      "keyColor": "#A6E3A1",
       "format": "{name}"
     },
     {
       "type": "memory",
       "key": "ram",
-      "keyColor": "#94E2D5",
       "format": "{used} / {total}"
     },
     "break",
