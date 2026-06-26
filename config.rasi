@@ -1,0 +1,136 @@
+configuration {
+    modi:                       "drun,run,window";
+    show-icons:                 true;
+    display-drun:               " ";
+    display-run:                " ";
+    display-window:             " ";
+    drun-display-format:        "{name} <span weight='light' size='small'><i>({generic})</i></span>";
+    window-format:              "{w} · {c} · {t}";
+}
+
+/* Global Properties & Color Palette */
+* {
+    font:                        "JetBrains Mono 11";
+    
+    /* Dark translucent aesthetic matching the backdrop image */
+    background:                  rgba(21, 21, 21, 0.75);
+    background-alt:              rgba(30, 30, 30, 0.4);
+    foreground:                  #c6e6f3;
+    selected:                    rgba(45, 45, 45, 0.8);
+    active:                      #9399b2;
+    urgent:                      #e06c75;
+    
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+/* Main Window */
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       550px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    border:                      1px;
+    border-color:                rgba(255, 255, 255, 0.08);
+    border-radius:               12px;
+    background-color:            @background;
+    cursor:                      "default";
+}
+
+/* Main Container Box */
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     25px;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/* Input Bar Section */
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px 15px;
+    border-radius:               8px;
+    background-color:            @background-alt;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    text-color:                  inherit;
+}
+
+entry {
+    enabled:                     true;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           rgba(198, 230, 243, 0.3);
+    text-color:                  inherit;
+}
+
+/* List View Container */
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     6px;
+    margin:                      5px 0px 0px 0px;
+}
+
+/* Elements inside List View */
+element {
+    enabled:                     true;
+    spacing:                     12px;
+    margin:                      0px;
+    padding:                     10px 12px;
+    border-radius:               6px;
+    cursor:                      pointer;
+}
+
+/* Element States */
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @foreground;
+    border:                      1px;
+    border-color:                rgba(255, 255, 255, 0.05);
+}
+
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+/* Icon & Text Sizing */
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        24px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
