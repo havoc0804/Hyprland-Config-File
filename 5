@@ -11,12 +11,9 @@ configuration {
 * {
     font:                        "Iosevka 11";
     
-    /* * Appending hex transparency directly to your colors.rasi tokens:
-     * @surface + cc = ~90% opacity (0.9)
-     * @surface-container + b3 = ~70% opacity (0.7)
-     */
-    background:                  @surfacecc;
-    background-alt:              @surface-containerb3;
+    /* Strict Material You variable mapping from colors.rasi */
+    background:                  @surface;
+    background-alt:              @surface-container;
     foreground:                  @on-surface;
     selected:                    @primary-container; 
     accent:                      @primary;
@@ -106,7 +103,7 @@ element alternate.normal {
     text-color:                  @foreground;
 }
 
-/* Element States - Urgent */
+/* Element States - Urgent (Fallback Handling) */
 element normal.urgent {
     background-color:            @error-container;
     text-color:                  @on-error-container;
@@ -120,7 +117,7 @@ element alternate.urgent {
     text-color:                  @on-error-container;
 }
 
-/* Element States - Active */
+/* Element States - Active (Fallback Handling) */
 element normal.active {
     background-color:            @secondary-container;
     text-color:                  @on-secondary-container;
