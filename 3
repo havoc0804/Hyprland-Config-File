@@ -1,0 +1,150 @@
+@import "colors.rasi"
+
+configuration {
+    modi:                       "drun,run,window";
+    show-icons:                 true;
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c}";
+}
+
+/* Global Properties & Variable Mapping */
+* {
+    font:                        "Iosevka 11";
+    
+    foreground:                  @on-surface;
+    selected:                    @primary-container; 
+    accent:                      @primary;
+    
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+/* Main Window */
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       500px;
+
+    enabled:                     true;
+    border:                      0px;
+    border-radius:               14px;
+    
+    /* Dynamically pulls from @surface while overriding the alpha channel to 0.9 */
+    background-color:            rgba(var(surface), 0.9);
+    cursor:                      "default";
+}
+
+/* Main Container Box */
+mainbox {
+    enabled:                     true;
+    spacing:                     12px;
+    padding:                     20px;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/* Input Bar Section */
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     12px 16px;
+    border-radius:               10px;
+    
+    /* Dynamically pulls from @surface-container while overriding alpha to 0.7 */
+    background-color:            rgba(var(surface-container), 0.7);
+    children:                    [ "entry" ];
+}
+
+entry {
+    enabled:                     true;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           @outline;
+    text-color:                  @foreground;
+}
+
+/* List View Container */
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     4px;
+    border:                      0px;
+}
+
+/* Elements inside List View */
+element {
+    enabled:                     true;
+    spacing:                     12px;
+    padding:                     8px 12px;
+    border-radius:               8px;
+    cursor:                      pointer;
+}
+
+/* Element States - Normal */
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @on-primary-container;
+}
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+/* Element States - Urgent */
+element normal.urgent {
+    background-color:            @error-container;
+    text-color:                  @on-error-container;
+}
+element selected.urgent {
+    background-color:            @error;
+    text-color:                  @on-error;
+}
+element alternate.urgent {
+    background-color:            @error-container;
+    text-color:                  @on-error-container;
+}
+
+/* Element States - Active */
+element normal.active {
+    background-color:            @secondary-container;
+    text-color:                  @on-secondary-container;
+}
+element selected.active {
+    background-color:            @secondary;
+    text-color:                  @on-secondary;
+}
+element alternate.active {
+    background-color:            @secondary-container;
+    text-color:                  @on-secondary-container;
+}
+
+/* Icon & Text Sizing */
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        22px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
